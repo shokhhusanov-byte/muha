@@ -23,21 +23,26 @@ const VOCABULARY = {
     "Formula", "Function", "Identify", "Income", "Indicate", "Individual", "Interpret", "Involve", "Issue", "Labour",
     "Legal", "Legislate", "Major", "Method", "Occur", "Percent", "Period", "Policy", "Principle", "Proceed",
     "Process", "Require", "Research", "Respond", "Role", "Section", "Sector", "Significant", "Similar", "Source",
-    "Specific", "Structure", "Theory", "Variable", "Achieve", "Acquisition", "Alternative", "Appropriate", "Aspect", "Assist"
+    "Specific", "Structure", "Theory", "Variable", "Achieve", "Acquisition", "Alternative", "Appropriate", "Aspect", "Assist",
+    "Category", "Challenge", "Chapter", "Civil", "Classic", "Clause", "Code", "Coherent", "Coincide", "Collapse",
+    "Colleague", "Combine", "Comment", "Commission", "Commit", "Commodity", "Communicate", "Community", "Compatible", "Compensate"
   ],
   BUSINESS: [
     "Management", "Liability", "Asset", "Revenue", "Investment", "Strategy", "Proposal", "Negotiation", "Growth", "Innovation",
     "Accounting", "Acquisition", "Advantage", "Advertisement", "Agenda", "Amortization", "Analysis", "Asset", "Audit", "Automation",
     "Benchmark", "Bid", "Blue-chip", "Boardroom", "Brainstorm", "Budget", "Capital", "Cash flow", "CEO", "Collaboration",
     "Commercial", "Commodity", "Competition", "Consultant", "Consumer", "Contract", "Corporate", "Currency", "Deadline", "Deficit",
-    "Delivery", "Department", "Depreciation", "Director", "Distribution", "Dividend", "Downsizing", "E-commerce", "Efficiency", "Employee"
+    "Delivery", "Department", "Depreciation", "Director", "Distribution", "Dividend", "Downsizing", "E-commerce", "Efficiency", "Employee",
+    "Entrepreneur", "Equity", "Exchange", "Executive", "Expansion", "Expense", "Export", "Facility", "Finance", "Forecast",
+    "Franchise", "Framework", "Governance", "Guarantee", "Incentive", "Infrastructure", "Insurance", "Inventory", "Invoice", "Joint venture"
   ],
   TRAVEL: [
     "Itinerary", "Departure", "Arrival", "Accommodation", "Destination", "Passport", "Shuttle", "Excursion", "Landmark", "Customs",
     "Adventure", "Backpack", "Baggage", "Boarding pass", "Booking", "Budget", "Carry-on", "Check-in", "City break", "Cruise",
     "Currency exchange", "Delayed", "Duty-free", "Ecotourism", "Embassy", "Flight", "Guidebook", "Hostel", "Insurance", "Jet lag",
     "Journey", "Landing", "Layover", "Luggage", "Map", "Motel", "Passenger", "Reservation", "Resort", "Route",
-    "Safari", "Sightseeing", "Souvenir", "Suitcase", "Terminal", "Ticket", "Tour", "Tourist", "Transfer", "Travel agent"
+    "Safari", "Sightseeing", "Souvenir", "Suitcase", "Terminal", "Ticket", "Tour", "Tourist", "Transfer", "Travel agent",
+    "Vacation", "Visa", "Voyage", "Walkway", "Wanderlust", "Waterfront", "Wildlife", "World heritage", "Yacht", "Zip line"
   ],
   DAILY: [
     "Hello", "How are you?", "Thank you", "Good morning", "Good night", 
@@ -45,7 +50,36 @@ const VOCABULARY = {
     "What's up?", "Take care", "I'm sorry", "No problem", "I don't know", "Could you help me?",
     "Where is the restroom?", "How much is this?", "I need a doctor", "Can I have some water?",
     "Bless you", "Congratulations", "Merry Christmas", "Happy Birthday", "Long time no see",
-    "I'm on my way", "Better late than never", "So far so good", "Keep it up", "Good luck"
+    "I'm on my way", "Better late than never", "So far so good", "Keep it up", "Good luck",
+    "Wait a minute", "I am busy", "What time is it?", "Call me back", "I will be there",
+    "How was your day?", "I miss you", "Sweet dreams", "Be careful", "Enjoy your meal"
+  ],
+  MEDICAL: [
+    "Abdomen", "Acute", "Allergy", "Anesthesia", "Antibiotic", "Artery", "Bacteria", "Bladder", "Blood pressure", "Bone",
+    "Breathe", "Cancer", "Cardiac", "Cartilage", "Cavity", "Check-up", "Chronic", "Clinic", "Coma", "Condition",
+    "Contagious", "Cough", "Diagnosis", "Digestion", "Disease", "Dose", "Emergency", "Examine", "Faint", "Fever",
+    "Fracture", "Healing", "Heart attack", "Immune", "Infection", "Inflammation", "Injury", "Insensitivity", "Joint", "Laboratory",
+    "Lungs", "Medicine", "Muscle", "Nerve", "Nurse", "Operation", "Organs", "Pain", "Patient", "Pharmacy",
+    "Physical", "Position", "Pulse", "Recovery", "Redness", "Sample", "Side effect", "Skin", "Specialist", "Surgery",
+    "Therapy", "Vaccine", "Vein", "Virus", "Wound", "X-ray", "Ambulance", "Bandage", "Capsule", "Fatigue",
+    "Genetics", "Hormone", "Insulin", "Metabolism", "Nutrition", "Obesity", "Pathogen", "Quarantine", "Radiology", "Symptom"
+  ],
+  TECH: [
+    "Algorithm", "Artificial Intelligence", "Back-end", "Bandwidth", "Binary", "Bit", "Blockchain", "Browser", "Bug", "Cache",
+    "Cloud computing", "Code", "Compiler", "Cybersecurity", "Data mining", "Database", "Debug", "Encryption", "Firewall", "Front-end",
+    "Hardware", "Input", "Interface", "Kernel", "Network", "Operating system", "Packet", "Processor", "Protocol", "RAM",
+    "Server", "Software", "Subnet", "User experience", "User interface", "Variable", "Version control", "Virtual reality", "Web server", "Wireless",
+    "App", "Array", "Bandwidth", "Cloud", "Content", "CPU", "Design", "Developer", "Digital", "Domain",
+    "Function", "Host", "IP", "Link", "Login", "Memory", "Mobile", "Query", "Stack", "Sync"
+  ],
+  EMOTIONS: [
+    "Anxious", "Baffled", "Cheerful", "Delighted", "Ecstatic", "Frustrated", "Grateful", "Humiliated", "Irritated", "Jovial",
+    "Melancholy", "Nostalgic", "Optimistic", "Pessimistic", "Resentful", "Satisfied", "Terrified", "Uneasy", "Vibrant", "Wary",
+    "Zeal", "Apathy", "Compassion", "Dread", "Euphoria", "Grief", "Hostility", "Insecurity", "Jealousy", "Loneliness"
+  ],
+  ENVIRONMENT: [
+    "Atmosphere", "Biodiversity", "Climate", "Conservation", "Ecosystem", "Emission", "Endangered", "Habitat", "Pollution", "Recycle",
+    "Renewable", "Sustainability", "Wildlife", "Deforestation", "Erosion", "Glacier", "Greenhouse", "Landfill", "Ozone", "Solar"
   ],
   IDIOMS: [
     "Piece of cake", "Break a leg", "Under the weather", "Better late than never", "Call it a day",
@@ -109,7 +143,7 @@ const BOOKS = [
 const VIDEOS = [
   { 
     id: "v-W8u7D7GqM", 
-    title: "Advanced English Vocabulary Lesson", 
+    title: "8 British Phrases You Need to Know", 
     channel: "English with Lucy", 
     views: "5.2M", 
     time: "18:24",
@@ -117,7 +151,7 @@ const VIDEOS = [
   },
   { 
     id: "JU6X_A_qN40", 
-    title: "Everyday English Conversations", 
+    title: "Essential Everyday English Phrases", 
     channel: "Smart Learning", 
     views: "2.1M", 
     time: "12:15",
@@ -170,6 +204,30 @@ const VIDEOS = [
     views: "950K", 
     time: "32:15",
     thumbnail: "https://images.unsplash.com/photo-1454165833767-027ffcb7141b?auto=format&fit=crop&q=80&w=400&h=225"
+  },
+  { 
+    id: "w69A-7y69M0", 
+    title: "50 Common English Phrases", 
+    channel: "English with Lucy", 
+    views: "3.2M", 
+    time: "24:10",
+    thumbnail: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=400&h=225"
+  },
+  { 
+    id: "8Zz_O7Z19-s", 
+    title: "BBC Grammar Challenge", 
+    channel: "BBC Learning English", 
+    views: "1.5M", 
+    time: "08:45",
+    thumbnail: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=400&h=225"
+  },
+  { 
+    id: "XTej1-K-7x8", 
+    title: "Learn with Friends TV Show", 
+    channel: "English TV", 
+    views: "8.1M", 
+    time: "19:50",
+    thumbnail: "https://images.unsplash.com/photo-1594908900066-3f47337549d8?auto=format&fit=crop&q=80&w=400&h=225"
   }
 ];
 
@@ -218,6 +276,7 @@ export default function App() {
   const [correctAnswersList, setCorrectAnswersList] = useState<Set<string>>(new Set());
   const [wrongAnswersList, setWrongAnswersList] = useState<Set<string>>(new Set());
   const [userName, setUserName] = useState("Shoxhusanov");
+  const [profileImage, setProfileImage] = useState<string | null>(null);
   const [isEditingName, setIsEditingName] = useState(false);
   const [tempName, setTempName] = useState("Shoxhusanov");
   const [selectedBook, setSelectedBook] = useState<typeof BOOKS[0] | null>(null);
@@ -225,6 +284,7 @@ export default function App() {
   const [readerFontFamily, setReaderFontFamily] = useState('font-serif');
   const [activeCategory, setActiveCategory] = useState<string>('ALL');
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const quizBusy = useRef(false);
 
   // Quiz State
   const [quizLoading, setQuizLoading] = useState(false);
@@ -268,30 +328,43 @@ export default function App() {
   };
 
   const startNewQuestion = useCallback(async () => {
+    if (quizBusy.current) return;
+    quizBusy.current = true;
     setQuizLoading(true);
     setAnswered(null);
     setTimeLeft(20);
     
-    let availablePhrases = ALL_WORDS.filter(p => !usedQuizPhrases.has(p));
+    let phrases = activeCategory === 'ALL' ? ALL_WORDS : VOCABULARY[activeCategory as keyof typeof VOCABULARY];
+    
+    // Use a temporary copy of used phrases to ensure sync selection
+    let currentUsed = new Set(usedQuizPhrases);
+    let availablePhrases = phrases.filter(p => !currentUsed.has(p));
+    
     if (availablePhrases.length === 0) {
-      setUsedQuizPhrases(new Set());
-      availablePhrases = ALL_WORDS;
+      currentUsed = new Set();
+      availablePhrases = phrases;
     }
     
     const randomPhrase = availablePhrases[Math.floor(Math.random() * availablePhrases.length)];
-    setUsedQuizPhrases(prev => new Set(prev).add(randomPhrase));
     
-    const question = await generateQuizQuestion(randomPhrase, selectedLanguage.code);
-    
-    // Shuffle the options so they appear in different places every time
-    const shuffledOptions = [...question.options].sort(() => Math.random() - 0.5);
-    
-    setCurrentQuestion({
-      ...question,
-      options: shuffledOptions
-    });
-    setQuizLoading(false);
-  }, [selectedLanguage.code, usedQuizPhrases]);
+    try {
+      const question = await generateQuizQuestion(randomPhrase, selectedLanguage.code);
+      const shuffledOptions = [...question.options].sort(() => Math.random() - 0.5);
+      
+      setCurrentQuestion({
+        ...question,
+        options: shuffledOptions
+      });
+      
+      // Only mark as used AFTER successful generation
+      setUsedQuizPhrases(prev => new Set(prev).add(randomPhrase));
+    } catch (error) {
+      console.error("Quiz generation error:", error);
+    } finally {
+      setQuizLoading(false);
+      quizBusy.current = false;
+    }
+  }, [selectedLanguage.code, activeCategory, usedQuizPhrases]);
 
   useEffect(() => {
     if (activeTab === 'quiz' && currentQuestion && !answered && timeLeft > 0) {
@@ -386,9 +459,13 @@ export default function App() {
           </button>
           <div 
             onClick={() => setActiveTab('profile')}
-            className="w-9 h-9 rounded-full bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-white text-sm font-black shadow-lg cursor-pointer ring-2 ring-white/20 hover:scale-110 transition-all"
+            className="w-9 h-9 rounded-full bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-white text-sm font-black shadow-lg cursor-pointer ring-2 ring-white/20 hover:scale-110 transition-all overflow-hidden"
           >
-            {userName.charAt(0).toUpperCase()}
+            {profileImage ? (
+              <img src={profileImage} alt={userName} className="w-full h-full object-cover" />
+            ) : (
+              userName.charAt(0).toUpperCase()
+            )}
           </div>
         </div>
       </header>
@@ -581,8 +658,11 @@ export default function App() {
                       layout
                       className={`p-10 rounded-[40px] text-center mb-10 border-t border-white/20 shadow-2xl relative overflow-hidden ${isDark ? 'bg-zinc-900/80 border-zinc-800' : 'bg-white/80 border-zinc-100'}`}
                     >
+                      <div className="absolute top-0 right-0 p-4 opacity-10">
+                        <GraduationCap className="w-20 h-20 text-indigo-500" />
+                      </div>
                       <span className="text-indigo-400 font-black uppercase tracking-[0.3em] text-[10px] mb-4 block underline">Question</span>
-                      <h3 className="text-4xl font-black leading-tight">"{currentQuestion.phrase}"</h3>
+                      <h3 className="text-4xl font-black leading-tight relative z-10">"{currentQuestion.phrase}"</h3>
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -652,8 +732,31 @@ export default function App() {
               <motion.div key="profile" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="max-w-2xl mx-auto py-10">
                 <div className={`p-12 rounded-[48px] border relative overflow-hidden ${isDark ? 'bg-zinc-900/80 border-zinc-800' : 'bg-white/80 border-zinc-100 shadow-2xl backdrop-blur-xl'}`}>
                    <div className="relative flex flex-col items-center text-center">
-                    <div className="w-32 h-32 rounded-[40px] bg-gradient-to-tr from-red-600 to-indigo-600 flex items-center justify-center text-white text-4xl font-black mb-8 shadow-2xl ring-4 ring-white/20 transform hover:rotate-6 transition-transform">
-                      {userName.charAt(0).toUpperCase()}
+                    <div 
+                      onClick={() => {
+                        const input = document.createElement('input');
+                        input.type = 'file';
+                        input.accept = 'image/*';
+                        input.onchange = (e: any) => {
+                          const file = e.target.files?.[0];
+                          if (file) {
+                            const reader = new FileReader();
+                            reader.onloadend = () => setProfileImage(reader.result as string);
+                            reader.readAsDataURL(file);
+                          }
+                        };
+                        input.click();
+                      }}
+                      className="w-32 h-32 rounded-[40px] bg-gradient-to-tr from-red-600 to-indigo-600 flex items-center justify-center text-white text-4xl font-black mb-8 shadow-2xl ring-4 ring-white/20 transform hover:rotate-6 transition-transform cursor-pointer group overflow-hidden"
+                    >
+                      {profileImage ? (
+                        <img src={profileImage} alt={userName} className="w-full h-full object-cover" />
+                      ) : (
+                        userName.charAt(0).toUpperCase()
+                      )}
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <Upload className="w-8 h-8 text-white" />
+                      </div>
                     </div>
                     {isEditingName ? (
                       <div className="flex flex-col items-center gap-4 w-full max-w-sm mb-6">
